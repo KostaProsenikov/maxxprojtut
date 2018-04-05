@@ -4,8 +4,12 @@ class="form-control" placeholder='Server'>
 <button class="btn btn-primary" 
 [disabled]="!allowNewServer" (click)="onCreateServer()"
 >Add Server</button>
-<div *ngIf="serverCreated">
+<!-- ngIf and Else directives -->
+<div *ngIf="serverCreated; else noServer">
    <div> {{serverCreationStatus}}. Name is {{serverName}}. </div> 
 </div>
+<ng-template #noServer>
+    <p>No server was created</p>
+</ng-template>
 <app-server></app-server>
 <app-server></app-server>
