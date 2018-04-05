@@ -1,5 +1,7 @@
 <div>
-   // add class here 'online' only if the serverStatus is online
+   <!-- // add class here 'online' only if the serverStatus is online -->
     <p [ngStyle]="{backgroundColor: getColor()}"
-        [ngClass]="{online: serverStatus === 'online'}" >Server with ID: {{ serverId }} is {{ getServerStatus() }}</p>
+        [ngClass]="{online: serverStatus === 'online'}" >
+        Server with ID: {{ server }} is {{ getServerStatus() }}
+    </p>
 </div>
